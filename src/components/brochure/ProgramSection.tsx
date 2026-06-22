@@ -139,14 +139,14 @@ const ProgramSection = () => {
             <button
               onClick={() => scrollBy(-1)}
               aria-label="Scroll left"
-              className="hidden md:flex absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-primary text-primary-foreground items-center justify-center shadow-lg hover:bg-gold transition-colors"
+              className="no-print hidden md:flex absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-primary text-primary-foreground items-center justify-center shadow-lg hover:bg-gold transition-colors"
             >
               ‹
             </button>
             <button
               onClick={() => scrollBy(1)}
               aria-label="Scroll right"
-              className="hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-primary text-primary-foreground items-center justify-center shadow-lg hover:bg-gold transition-colors"
+              className="no-print hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-primary text-primary-foreground items-center justify-center shadow-lg hover:bg-gold transition-colors"
             >
               ›
             </button>
@@ -156,10 +156,10 @@ const ProgramSection = () => {
               initial={{ opacity: 0 }}
               animate={opened ? { opacity: 1 } : {}}
               transition={{ delay: 1, duration: 0.6 }}
-              className="overflow-x-auto py-12 px-8 scroll-smooth"
+              className="overflow-x-auto py-12 px-8 scroll-smooth print-program-scroll"
               style={{ scrollbarWidth: "thin" }}
             >
-              <div className="flex gap-6 items-stretch min-w-min">
+              <div className="flex gap-6 items-stretch min-w-min print-program-grid">
                 {programItems.map((item, index) => (
                   <motion.div
                     key={index}
@@ -200,7 +200,7 @@ const ProgramSection = () => {
               </div>
             </motion.div>
 
-            <p className="text-center text-xs font-body tracking-[0.3em] uppercase text-foreground/50 pb-4">
+            <p className="no-print text-center text-xs font-body tracking-[0.3em] uppercase text-foreground/50 pb-4">
               ← Scroll to explore the ceremony →
             </p>
           </motion.div>
