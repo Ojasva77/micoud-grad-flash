@@ -76,7 +76,7 @@ const HeroSection = () => {
           className="mt-10 font-body text-lg tracking-wide"
         >
           <p className="text-gold font-semibold text-xl">Class of 2026</p>
-          <p className="mt-2 opacity-80">Friday, June 27th, 2026 • 10:00 AM</p>
+          <p className="mt-2 opacity-80">Thursday, June 25th, 2026</p>
           <p className="opacity-80">Micoud Secondary School Auditorium</p>
           <p className="opacity-80">Micoud, Saint Lucia</p>
         </motion.div>
