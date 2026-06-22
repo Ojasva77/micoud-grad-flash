@@ -1,46 +1,40 @@
 import { motion } from "framer-motion";
-import mssLogo from "@/assets/mss-logo.jpg";
+import { Printer } from "lucide-react";
 
 const FooterSection = () => {
   return (
-    <section className="py-20 px-6 green-gradient text-primary-foreground relative">
-      <div className="absolute top-0 left-0 right-0 h-1 gold-gradient" />
-      
-      <div className="max-w-3xl mx-auto text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <img
-            src={mssLogo}
-            alt="MSS Logo"
-            className="w-20 h-20 mx-auto rounded-full border-2 border-gold mb-6 object-cover bg-card"
-          />
+    <footer className="relative teal-gradient text-primary-foreground py-16 px-6 border-t-4 border-burnt">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="max-w-xl mx-auto text-center space-y-6"
+      >
+        <p className="font-body text-sm uppercase tracking-[0.3em] opacity-90">
+          Micoud Secondary School
+        </p>
+        <div className="w-12 h-px bg-burnt mx-auto" />
+        <p className="font-display italic text-lg opacity-90">
+          "Learn Well to Serve Better"
+        </p>
+        <p className="font-body text-xs font-light opacity-70 leading-relaxed">
+          Micoud Village, Saint Lucia
+          <br />
+          Class of 2026 — Graduation Ceremony
+        </p>
 
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-2">
-            Micoud Secondary School
-          </h2>
-          <p className="font-elegant text-xl italic text-gold mb-8">
-            "Learn Well to Serve Better"
-          </p>
-
-          <div className="w-16 h-0.5 gold-gradient mx-auto mb-8" />
-
-          <div className="font-body text-sm opacity-80 space-y-1">
-            <p>Micoud, Saint Lucia</p>
-            <p>Graduation Ceremony — Class of 2026</p>
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-primary-foreground/20">
-            <p className="font-elegant text-lg italic text-gold-light">
-              "The future belongs to those who believe in the beauty of their dreams."
-            </p>
-            <p className="font-body text-xs mt-3 opacity-60">— Eleanor Roosevelt</p>
-          </div>
-        </motion.div>
-      </div>
-    </section>
+        <div className="pt-4 no-print">
+          <button
+            onClick={() => window.print()}
+            className="inline-flex items-center gap-2 px-8 py-3 bg-burnt text-primary-foreground font-body font-semibold rounded-full hover:bg-burnt-light hover:scale-105 transition-all shadow-lg uppercase text-xs tracking-widest"
+            style={{ backgroundColor: "hsl(var(--burnt))" }}
+          >
+            <Printer className="w-4 h-4" />
+            Print Brochure
+          </button>
+        </div>
+      </motion.div>
+    </footer>
   );
 };
 
