@@ -9,7 +9,7 @@ type Item = {
 };
 
 const programItems: Item[] = [
-  { chapter: "Chairperson", event: "Chairperson", person: "Mr. Donald Albert" },
+  { chapter: "Chairpersons", event: "Chairpersons", person: "Mr. Raphael Jn Charles & Mrs. Annia Modeste" },
   { chapter: "Procession", event: "Entrance of Graduands", person: "Musical Rendition" },
   { chapter: "Anthem", event: "National Anthem", person: "Instrumental" },
   { chapter: "Invocation", event: "Prayers", person: "Renaldo St. Helene" },
@@ -22,7 +22,7 @@ const programItems: Item[] = [
   { chapter: "Certificates", event: "Presentation of School Leaving Certificates", person: "Year Head & Homeroom Sponsors" },
   { chapter: "Discipline", event: "Presentation of Discipline Awards", person: "Deans of Discipline & Sponsors" },
   { chapter: "Performance", event: "Performance", person: "Micoud Secondary Dance Club" },
-  { chapter: "Feature", event: "Feature Address", person: "Mr. Ted Sandiford" },
+  { chapter: "Feature", event: "Feature Address", person: "Mrs. Annie Greaves Maryat" },
   { chapter: "Token", event: "Presentation to Guest Speaker", person: "Kievon Abbot" },
   { chapter: "Rendition", event: "Rendition", person: "Ms. Shan Lucien / MSS Choir" },
   { chapter: "Academic", event: "Presentation of Individual Subject Awards" },
