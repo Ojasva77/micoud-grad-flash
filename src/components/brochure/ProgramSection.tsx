@@ -95,7 +95,7 @@ const ProgramSection = () => {
             className="absolute left-1/2 top-0 bottom-0 w-px bg-teal/30 -translate-x-1/2 hidden md:block"
           />
 
-          <div className="space-y-10 md:space-y-6">
+          <div className="space-y-8 md:space-y-6">
             {programItems.map((item, idx) => {
               const isLeft = idx % 2 === 0;
               const dotColor = idx % 3 === 0 ? "bg-burnt" : "bg-teal";
@@ -107,13 +107,15 @@ const ProgramSection = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.5, delay: 0.05 }}
-                  className={`programme-item flex flex-col md:flex-row relative ${
+                  className={`programme-item relative pl-6 md:pl-0 border-l-2 md:border-l-0 border-teal/20 flex flex-col md:flex-row ${
                     isLeft
-                      ? "md:justify-end md:pr-10 md:text-right md:w-1/2"
-                      : "md:ml-auto md:pl-10 md:text-left md:w-1/2"
+                      ? "md:justify-end md:pr-10 md:text-right md:w-1/2 md:border-none"
+                      : "md:ml-auto md:pl-10 md:text-left md:w-1/2 md:border-none"
                   }`}
                 >
-                  {/* Dot on spine */}
+                  {/* Mobile dot */}
+                  <div className={`md:hidden absolute top-2 -left-[5px] w-2 h-2 rounded-full ${dotColor}`} />
+                  {/* Desktop dot on spine */}
                   <div
                     className={`hidden md:block absolute top-2 w-3 h-3 rounded-full border-2 border-background z-10 ${dotColor} ${
                       isLeft ? "-right-1.5" : "-left-1.5"
@@ -145,12 +147,13 @@ const ProgramSection = () => {
                               isLeft ? "md:justify-end" : ""
                             }`}
                           >
+                            <span className="text-burnt text-xs md:hidden">◆</span>
                             {!isLeft && (
-                              <span className="text-burnt text-xs">◆</span>
+                              <span className="hidden md:inline text-burnt text-xs">◆</span>
                             )}
                             <span>{s}</span>
                             {isLeft && (
-                              <span className="text-burnt text-xs">◆</span>
+                              <span className="hidden md:inline text-burnt text-xs">◆</span>
                             )}
                           </li>
                         ))}
