@@ -15,7 +15,7 @@ const programItems: Item[] = [
   { chapter: "Invocation", event: "Prayers", person: "Renaldo St. Helene" },
   { chapter: "Welcome", event: "Welcome Remarks", person: "Ms. Stecia Stanislaus" },
   { chapter: "Reporting", event: "Year Head's Remarks" },
-  { chapter: "Interlude", event: "Special Rendition", person: "Ms. Amelia Francis" },
+  
   { chapter: "Remarks", event: "Remarks", person: "Mr. Jean Jeriffe — Education Officer (District V)" },
   { chapter: "Remarks", event: "Remarks", person: "Representative of Ministry of Education, Sustainable Development, Innovation, Science, Technology and Vocational Training" },
   { chapter: "Address", event: "Principal's Address", person: "Mrs. Flora Joseph" },
