@@ -7,22 +7,22 @@
 @layer base {
   :root {
     --background: 40 50% 98%;
-    --foreground: 172 100% 12%;
+    --foreground: 188 70% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 172 100% 12%;
+    --card-foreground: 188 70% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 172 100% 12%;
+    --popover-foreground: 188 70% 14%;
 
-    --primary: 172 100% 15%;
+    --primary: 188 75% 22%;
     --primary-foreground: 40 50% 98%;
 
     --secondary: 40 40% 94%;
-    --secondary-foreground: 172 100% 15%;
+    --secondary-foreground: 188 75% 22%;
 
     --muted: 40 30% 95%;
-    --muted-foreground: 172 15% 35%;
+    --muted-foreground: 188 20% 35%;
 
     --accent: 14 88% 40%;
     --accent-foreground: 40 50% 98%;
@@ -30,14 +30,14 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 40 50% 98%;
 
-    --border: 172 30% 85%;
-    --input: 172 30% 85%;
-    --ring: 172 100% 15%;
+    --border: 188 30% 85%;
+    --input: 188 30% 85%;
+    --ring: 188 75% 22%;
 
     --radius: 0.5rem;
 
-    --teal: 172 100% 15%;
-    --teal-dark: 172 100% 10%;
+    --teal: 188 75% 22%;
+    --teal-dark: 192 80% 14%;
     --burnt: 14 88% 40%;
     --burnt-light: 14 70% 55%;
     --cream: 40 50% 98%;
@@ -103,7 +103,7 @@
     color: hsl(var(--cream));
   }
   .teal-gradient {
-    background: linear-gradient(135deg, hsl(172 100% 10%), hsl(172 100% 15%), hsl(172 80% 20%));
+    background: linear-gradient(135deg, hsl(192 80% 14%), hsl(188 75% 22%), hsl(186 65% 28%));
   }
   .dotted-pattern {
     background-image: radial-gradient(circle at 2px 2px, hsl(var(--cream) / 0.18) 1px, transparent 0);
