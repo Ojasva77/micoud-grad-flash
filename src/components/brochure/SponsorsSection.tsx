@@ -1,5 +1,35 @@
 import { motion } from "framer-motion";
 
+const tiers = [
+  {
+    name: "Platinum",
+    accent: "text-teal",
+    border: "border-teal/40",
+    bg: "bg-teal/5",
+    sponsors: ["SSDF", "Hon. Jeremiah Norbert"],
+  },
+  {
+    name: "Gold",
+    accent: "text-burnt",
+    border: "border-burnt/40",
+    bg: "bg-burnt/5",
+    sponsors: [
+      "National Lotteries Authority",
+      "Class of 1993",
+      "Proven Bank",
+      "Dawn Food",
+      "Heineken St. Lucia",
+    ],
+  },
+  {
+    name: "Silver",
+    accent: "text-foreground/80",
+    border: "border-foreground/20",
+    bg: "bg-foreground/5",
+    sponsors: ["Designs Plus", "Coconut Bay", "Sacha Noel", "Trophy Center"],
+  },
+];
+
 const businesses = [
   "B&B Money Savers Inc.",
   "BJ Ambrose & Associates",
@@ -19,6 +49,7 @@ const businesses = [
   "Hensbert Designs",
   "Hewanorra Air Cargo Services (HACS)",
   "Isaac & Joseph Enterprises",
+  "J & B Enterprise",
   "Kens Service Station",
   "Knight Meds",
   "Laborie Credit Union",
@@ -34,6 +65,7 @@ const businesses = [
   "Republic Bank Limited",
   "Southern Taxi Association",
   "St Lucia Social Development Fund",
+  "St. Lucia Volleyball Association",
   "Total Healthcare Pharmacy",
   "Techtro Knights",
   "Trophy Center",
@@ -65,6 +97,7 @@ const individuals = [
   "Ms. Juddy Harlow",
   "Ms. Kervinah Segobin",
   "Micoud Secondary School – Theatre Arts Dept",
+  "Mr. Ojasva Pandey",
   "Ms. Sandra John",
   "Ms. Lenell Malzaire",
   "Ms. Shem Maxwell",
@@ -99,13 +132,37 @@ const SponsorsSection = () => {
             Our Sponsors
           </h3>
           <p className="font-body text-base md:text-lg text-foreground/75 italic mt-6 max-w-2xl mx-auto leading-relaxed">
-            The Class of 2026 extends its heartfelt gratitude to the following businesses
-            and individuals whose generosity made this celebration possible. Your support
-            has helped shape our journey — thank you.
+            The Class of 2026 extends its heartfelt gratitude to the following sponsors
+            whose generosity made this celebration possible. Your support has helped shape
+            our journey — thank you.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-10 md:gap-12 mt-14">
+        {/* Tiered Sponsors */}
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-6 mb-16">
+          {tiers.map((tier, idx) => (
+            <motion.div
+              key={tier.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              className={`${tier.bg} border ${tier.border} p-6 md:p-7 text-center shadow-sm`}
+            >
+              <h4 className={`font-display text-xl md:text-2xl font-bold uppercase tracking-[0.2em] ${tier.accent}`}>
+                {tier.name}
+              </h4>
+              <div className="w-10 h-px bg-burnt mx-auto my-4" />
+              <ul className="font-body text-sm md:text-[15px] text-foreground/85 space-y-2">
+                {tier.sponsors.map((s) => (
+                  <li key={s}>{s}</li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-10 md:gap-12">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
