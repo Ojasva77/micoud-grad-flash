@@ -81,8 +81,8 @@ const individuals = [
   "Ms. Rafati Eugene",
   "Senator Elisha Norbert",
   "Ms. Solange Charlery",
-  "Ms. Stephen Martin",
-  "Mr. Tamara St. Aimee Emmanuel",
+  "Mr. Stephen Martin",
+  "Ms. Tamara St. Aimee Emmanuel",
 ];
 
 const SponsorsSection = () => {
