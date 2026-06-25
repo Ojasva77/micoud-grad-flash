@@ -72,7 +72,7 @@ const individuals = [
   "Mr. Filtus Holder",
   "Ms. Gianetti George",
   "Mr. Jerome St Omer",
-  "Mr. Jullian Henry",
+  "Mrs. Jullian Henry",
   "Mr. Kersheik Charles",
   "Mr. Ludwin Holder",
   "Ms. Cindy Mathurin",
